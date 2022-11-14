@@ -2,6 +2,8 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import jwt_decode from "jwt-decode";
 import axios from 'axios'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import RankedUsers from './components/userRankings';
 import Header from './components/header';
 import AdminPage from './components/adminPage';
