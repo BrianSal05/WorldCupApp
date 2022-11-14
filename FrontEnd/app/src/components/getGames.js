@@ -5,15 +5,15 @@ export default function GetGames({api, user}){
     const [games, getGames] = useState([])
 
     useEffect(() =>{
-        api.get('/games').then(res => {
+        api.get('/games/nextgames').then(res => {
             getGames(res.data)
         })
-    }, [])
+    }, []);
 
     return(
         <div>
             {games.map( game => (
-                <GetGame game = {game} api = {api} user = {user} madness = {0} points = {3} />
+                <GetGame game = {game} api = {api} user = {user} madness = {false} />
             ))}
         </div>
     )
